@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses | Hot Beans Web</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #ffffff;
+    margin: 0;
+}
+
+   body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #121212;
+            color: #ffffff;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .hero-section {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, #1a1a1a, #121212);
+        }
+
+        .dropdown-container {
+            margin: 30px auto;
+            max-width: 400px;
+        }
+
+        select {
+            width: 100%;
+            padding: 15px;
+            background: #1e1e1e;
+            color: #d1a3a3;
+            border: 2px solid #d1a3a3;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            transition: 0.3s;
+        }
+
+.navigation a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: #d1a3a3;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    color: #aaa;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+.course-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 20px 80px;
+}
+
+.course-card {
+    background: #1e1e1e;
+    width: 320px;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(209,163,163,0.1);
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    border-color: #d1a3a3;
+}
+
+.course-card h3 {
+    color: #d1a3a3;
+}
+
+.course-card p {
+    color: #bbb;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.level {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.duration {
+    font-size: 12px;
+    color: #2ecc71;
+    margin-top: 10px;
+}
+
+
+.cta {
+    text-align: center;
+    padding: 80px 20px;
+    background: #181818;
+}
+
+.create-btn {
+    background-color: #d1a3a3;
+    color: #121212;
+    border: none;
+    padding: 15px 40px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.create-btn:hover {
+    background: white;
+}
+
+
+footer {
+    background-color: #0a0a0a;
+    padding: 60px 20px 20px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-col h3 {
+    color: #d1a3a3;
+}
+
+.footer-col p, .footer-col a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+    font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+
+
+<div class="header">
+    <div class="title">Hot Beans Web</div>
+    <div class="navigation">
+        <a href="index.html">Home</a>
+        <a href="about_us.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="courses.html">Courses</a>
+        <a href="projects.html">Projects</a>
+        <a href="sign_up.html">Sign Up</a>
+    </div>
+</div>
+
+<section class="hero">
+    <h1>Developer Courses</h1>
+    <p>Learn the skills needed to become a modern web developer at Hot Beans Web. Our courses are designed to prepare you for real industry projects while focusing on sustainability.</p>
+</section>
+
+
+<section class="course-container">
+
+    <div class="course-card">
+        <div class="level">Beginner</div>
+        <h3>HTML & CSS Fundamentals</h3>
+        <p>Learn how to build responsive websites from scratch using modern HTML and CSS techniques.</p>
+        <div class="duration">6 Weeks</div>
+    </div>
+
+    <div class="course-card">
+        <div class="level">Intermediate</div>
+        <h3>JavaScript Development</h3>
+        <p>Master JavaScript and build interactive, dynamic web applications used in real-world projects.</p>
+        <div class="duration">8 Weeks</div>
+    </div>
+
+    <div class="course-card">
+        <div class="level">Intermediate</div>
+        <h3>Frontend Frameworks</h3>
+        <p>Learn modern tools like React to create fast, scalable user interfaces.</p>
+        <div class="duration">8 Weeks</div>
+    </div>
+
+    <div class="course-card">
+        <div class="level">Advanced</div>
+        <h3>Backend Development</h3>
+        <p>Understand servers, databases, and APIs to build powerful full-stack applications.</p>
+        <div class="duration">10 Weeks</div>
+    </div>
+
+    <div class="course-card">
+        <div class="level">Specialist</div>
+        <h3>Eco-Friendly Web Design</h3>
+        <p>Learn how to reduce website carbon footprint with efficient coding and optimisation techniques.</p>
+        <div class="duration">4 Weeks</div>
+    </div>
+
+    <div class="course-card">
+        <div class="level">Career Path</div>
+        <h3>Junior Developer Bootcamp</h3>
+        <p>A complete training program designed to prepare you for a career at Hot Beans Web.</p>
+        <div class="duration">12 Weeks</div>
+    </div>
+
+</section>
+
+
+<section class="cta">
+    <h2>Start Your Journey Today</h2>
+    <p>Sign up and begin learning with Hot Beans Web.</p>
+    <button class="create-btn">Create Account</button>
+</section>
+
+
+<footer>
+    <div class="footer-columns">
+        <div class="footer-col">
+            <h3>Hot Beans Web</h3>
+            <p>Building innovative websites while supporting the next generation of developers.</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about_us.html">About</a>
+            <a href="careers.html">Careers</a>
+            <a href="courses.html">Courses</a>
+            <a href="projects.html">Projects</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p>Email: info@hotbeansweb.com</p>
+            <p>Phone: 01234 567 890</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Hot Beans Web. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

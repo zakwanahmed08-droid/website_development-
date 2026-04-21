@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div class="header">
+        <div class="title"> 
+            <img src="favicon.ico" alt="Icon">
+            <div href = "about_me.html">Hot beans web</div>
+        </div>
+        <div class="navigation"> 
+            <a href = "index.html">Home</a>
+            <a href = "about_us.html">About us</a>
+            <a href = "careers.html">Careers</a>
+            <a href="courses.html">courses</a>
+            <a href = "projects.html">Projects</a>
+              <a href="sign_up.html">Sign Up</a>
+        </div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Careers & Training | Hot Beans Web</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #121212;
+            color: #ffffff;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .hero-section {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, #1a1a1a, #121212);
+        }
+
+        .dropdown-container {
+            margin: 30px auto;
+            max-width: 400px;
+        }
+
+        select {
+            width: 100%;
+            padding: 15px;
+            background: #1e1e1e;
+            color: #d1a3a3;
+            border: 2px solid #d1a3a3;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            transition: 0.3s;
+        }
+
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+            display: none; 
+        }
+
+        .info-box {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(209, 163, 163, 0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            transition: all 0.3s ease;
+        }
+
+        .info-box:hover {
+            transform: translateY(-5px);
+            border-color: #d1a3a3;
+        }
+
+        .info-box h3 {
+            color: #d1a3a3;
+            margin-top: 0;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .salary-text {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2ecc71;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skills-list li {
+            font-size: 14px;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skills-list li::before {
+            content: "â†’";
+            position: absolute;
+            left: 0;
+            color: #d1a3a3;
+        }
+
+ 
+        .trainee-section {
+            background: #1a1a1a;
+            padding: 80px 20px;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        .roadmap-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .step-card {
+            flex: 1;
+            min-width: 200px;
+            background: #121212;
+            padding: 25px;
+            border-radius: 15px;
+            position: relative;
+            border: 1px solid #333;
+        }
+
+        .step-num {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #d1a3a3;
+            color: #121212;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .step-card h4 { color: #d1a3a3; margin-top: 10px; }
+        .step-card p { font-size: 13px; color: #888; }
+
+        .apply-container {
+            text-align: center;
+            margin-top: 40px;
+            display: none;
+        }
+
+        .apply-btn {
+            background: #d1a3a3;
+            color: #121212;
+            padding: 15px 50px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        footer {
+            background-color: #0a0a0a;
+            padding: 60px 20px 20px;
+            border-top: 1px solid #222;
+        }
+
+        .footer-columns {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-col h3 { color: #d1a3a3; margin-bottom: 20px; }
+        .footer-col a, .footer-col p { color: #ffffff; font-size: 14px; text-decoration: none; display: block; line-height: 2; }
+    </style>
+</head>
+<body>
+
+<section class="hero-section">
+    <h1>Careers & Trainee Program</h1>
+    <p style="color: #888;">Whether you're a senior pro or just starting out, we have a place for you.</p>
+    
+    <div class="dropdown-container">
+        <select id="roleSelector" onchange="updateCareerInfo()">
+            <option value="" disabled selected>Select a path to view details...</option>
+            <option value="frontend">Front-End Developer</option>
+            <option value="backend">Back-End Developer</option>
+            <option value="fullstack">Full-Stack Developer</option>
+            <option value="uiux">UI/UX Designer</option>
+        </select>
+    </div>
+</section>
+
+<div class="info-grid" id="infoGrid">
+    <div class="info-box">
+        <h3>Role Overview</h3>
+        <p id="roleOverview" style="font-size: 14px; color: #ccc;">...</p>
+    </div>
+    <div class="info-box">
+        <h3>Expected Salary</h3>
+        <div class="salary-text" id="roleSalary">£0</div>
+        <p style="font-size: 12px; color: #888;">Full benefits package included.</p>
+    </div>
+    <div class="info-box">
+        <h3>The Daily Grind</h3>
+        <p id="roleWork" style="font-size: 14px; color: #ccc;">...</p>
+    </div>
+    <div class="info-box">
+        <h3>Required Skills</h3>
+        <ul class="skills-list" id="roleSkills"></ul>
+    </div>
+</div>
+
+<div class="apply-container" id="applyContainer">
+    <a href="#" class="apply-btn">Submit Application</a>
+</div>
+
+<section class="trainee-section">
+    <h2 style="color: #d1a3a3; font-size: 32px;">Not experienced yet? Join our Trainee Program</h2>
+    <p style="color: #888; max-width: 700px; margin: 0 auto;">We offer a 6-month intensive training program for aspiring developers. We pay you to learn the skills needed to join our full-time team.</p>
+    
+    <div class="roadmap-container">
+        <div class="step-card">
+            <div class="step-num">1</div>
+            <h4>Learning Phase</h4>
+            <p>Master HTML, CSS, and JS through guided workshops and online courses.</p>
+        </div>
+        <div class="step-card">
+            <div class="step-num">2</div>
+            <h4>Shadowing</h4>
+            <p>Work alongside senior devs on real Hot Beans client projects.</p>
+        </div>
+        <div class="step-card">
+            <div class="step-num">3</div>
+            <h4>Graduation</h4>
+            <p>Pass your final assessment and move into a Junior Developer role.</p>
+        </div>
+    </div>
+    <p style="color: #d1a3a3; font-weight: bold;">Trainee Starting Salary: £22,000 during the 6-month period.</p>
+</section>
+
+<footer>
+    <div class="footer-columns">
+        <div class="footer-col">
+            <h3>Hot Beans Web</h3>
+            <p>Building innovative websites while supporting the next generation of developers.</p>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <a href="sign_up.html">Sign Up</a>
+            <a href="index.html">Home</a>
+            <a href="about_us.html">About</a>
+            <a href="careers.html">Careers</a>
+            <a href="courses.html">courses</a>
+            <a href="projects.html">Projects</a>
+        </div>
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p>Email: info@hotbeansweb.com</p>
+            <p>Phone: 01234 567 890</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Hot Beans Web. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    const careerData = {
+        'frontend': {
+            overview: 'Building the visual elements of a website that users interact with directly.',
+            salary: '£32k - £48k',
+            work: 'Developing React components, ensuring mobile responsiveness, and optimizing assets.',
+            skills: ['HTML5 & CSS3', 'JavaScript (ES6+)', 'React.js', 'Figma to Code']
+        },
+        'backend': {
+            overview: 'Handling the server-side logic and database management that powers the site.',
+            salary: '£38k - £55k',
+            work: 'Building APIs, managing databases, and ensuring server security and speed.',
+            skills: ['Node.js', 'SQL / MongoDB', 'Server Security', 'Python']
+        },
+        'fullstack': {
+            overview: 'Managing both the front-end and back-end for total project control.',
+            salary: '£45k - £65k',
+            work: 'Deploying full applications and managing the bridge between data and UI.',
+            skills: ['MERN Stack', 'Deployment Tools', 'System Design', 'Project Management']
+        },
+        'uiux': {
+            overview: 'Designing the user experience to be as smooth and efficient as possible.',
+            salary: '£28k - £42k',
+            work: 'User research, wireframing, and creating high-fidelity visual prototypes.',
+            skills: ['Figma', 'User Research', 'Adobe Suite', 'Prototyping']
+        }
+    };
+
+    function updateCareerInfo() {
+        const selector = document.getElementById('roleSelector');
+        const selectedValue = selector.value;
+        const data = careerData[selectedValue];
+
+        if (data) {
+            document.getElementById('infoGrid').style.display = 'grid';
+            document.getElementById('applyContainer').style.display = 'block';
+            document.getElementById('roleOverview').innerText = data.overview;
+            document.getElementById('roleSalary').innerText = data.salary;
+            document.getElementById('roleWork').innerText = data.work;
+
+            const skillsUl = document.getElementById('roleSkills');
+            skillsUl.innerHTML = '';
+            data.skills.forEach(skill => {
+                const li = document.createElement('li');
+                li.innerText = skill;
+                skillsUl.appendChild(li);
+            });
+        }
+    }
+</script>
+
+</body>
+</html>
+

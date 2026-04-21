@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Hot Beans Website</title>
+    <style>
+      
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #121212; 
+            color: #ffffff;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+      
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .dev-section, .offer-section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+   
+        .info-card {
+            background: #1e1e1e;
+            padding: 40px 25px;
+            border-radius: 20px;
+            width: 320px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .info-card:hover {
+            transform: translateY(-15px);
+            border-color: #d1a3a3;
+            box-shadow: 0 20px 40px rgba(209, 163, 163, 0.15);
+        }
+
+        .info-card h3 {
+            margin-bottom: 20px;
+            color: #d1a3a3; 
+            font-size: 1.4em;
+            letter-spacing: 1px;
+        }
+
+        .info-card p {
+            font-size: 0.95em;
+            line-height: 1.8;
+            color: #b3b3b3;
+        }
+
+        .dev-card img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            filter: grayscale(30%);
+            transition: filter 0.3s ease;
+        }
+
+        .dev-card:hover img {
+            filter: grayscale(0%);
+        }
+
+        .banner-framed {
+            width: 60%; 
+            display: block; 
+            margin: 50px auto; 
+            border: 10px solid #252525; 
+            padding: 12px; 
+            background-color: #d1a3a3; 
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        .banner-framed:hover {
+            transform: scale(1.02);
+        }
+
+    
+        .heading4 {
+            font-size: 2.2em;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+        }
+
+        .introduction {
+            font-weight: 300;
+            color: #999;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1em;
+        }
+
+   
+        .content {
+            background-color: #181818;
+            padding: 100px 20px;
+            color: white;
+            border-radius: 50px 50px 0 0;
+        }
+
+        .content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .create-btn {
+            background-color: #d1a3a3;
+            color: #121212;
+            border: none;
+            padding: 18px 45px;
+            font-size: 1.1em;
+            font-weight: 800;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 20px rgba(209, 163, 163, 0.2);
+        }
+
+        .create-btn:hover {
+            background-color: #ffffff;
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+        }
+    
+  footer {
+            background-color: #0a0a0a;
+            padding: 60px 20px 20px;
+            border-top: 1px solid #222;
+        }
+
+        .footer-columns {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-col h3 { color: #d1a3a3; margin-bottom: 20px; }
+        .footer-col a, .footer-col p { color: #ffffff; font-size: 14px; text-decoration: none; display: block; line-height: 2; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="title"> 
+            <img src="favicon.ico" alt="Icon">
+            <div>Hot beans web</div>
+        </div>
+        <div class="navigation"> 
+            <a href="index.html">Home</a>
+            <a href="about_us.html">About us</a>
+            <a href="careers.html">Careers</a>
+            <a href="courses.html">courses</a>
+            <a href="projects.html">Projects</a>
+            <a href="sign_up.html">Sign Up</a>
+        </div>
+    </div>
+
+    <div class="reveal">
+        <img src="developer.png" class="banner-framed" alt="Banner">
+                                
+        <h3 class="heading4" style="text-align:center;">Why Choose Hot Beans for a Career? </h3>
+        <h4 class="introduction" style="text-align:center;">Join a web development company that values sustainability and innovation. At Hot Beans Web we believe in creating eco-friendly web solutions that make a positive impact on the environment.</h4>
+    </div>
+
+    <div class="offer-section reveal">
+        <h2 class="heading4" style="color: #d1a3a3;">What We Offer</h2>
+        <div class="card-container">
+            <div class="info-card">
+                <h3>Modern Development</h3>
+                <p>We create modern, fast and responsive websites using the latest web technologies.</p>
+            </div>
+            <div class="info-card">
+                <h3>Career Growth</h3>
+                <p>Our company supports junior developers and helps them grow into professional web engineers.</p>
+            </div>
+            <div class="info-card">
+                <h3>Eco-Friendly Design</h3>
+                <p>We focus on sustainable and efficient web solutions that reduce digital carbon footprints.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="dev-section reveal">
+        <h2 class="heading4" style="color: #d1a3a3;">Meet Our Developers</h2>
+        <div class="card-container">
+            <div class="info-card dev-card">
+                <img src="dev1.png" alt="Alex Carter">
+                <h3>Alex Carter</h3>
+                <p style="color: #888; font-weight: bold; font-size: 0.8em; text-transform: uppercase;">Frontend Developer</p>
+                <p><i>"I enjoy transforming creative ideas into responsive websites that people love to use."</i></p>
+            </div>
+            <div class="info-card dev-card">
+                <img src="dev2.png" alt="Jamie Lee">
+                <h3>Jamie Lee</h3>
+                <p style="color: #888; font-weight: bold; font-size: 0.8em; text-transform: uppercase;">Backend Developer</p>
+                <p><i>"Building reliable systems behind the scenes is what makes great websites possible."</i></p>
+            </div>
+            <div class="info-card dev-card">
+                <img src="dev3.png" alt="Lucy Martinez">
+                <h3>Lucy Martinez</h3>
+                <p style="color: #888; font-weight: bold; font-size: 0.8em; text-transform: uppercase;">UI/UX Designer</p>
+                <p><i>"Great design makes technology simple, accessible, and enjoyable for everyone."</i></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content reveal" style="text-align: center;">
+         <h1>Interested?</h1>
+        <p>Click the button below to create an account and start your journey.</p>
+        <button class="create-btn" onclick="openForm()">Create account</button>
+    </div>
+
+<footer>
+    <div class="footer-columns">
+        <div class="footer-col">
+            <h3>Hot Beans Web</h3>
+            <p>Building innovative websites while supporting the next generation of developers.</p>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <a href="sign_up.html">Sign Up</a>
+            <a href="index.html">Home</a>
+            <a href="about_us.html">About</a>
+            <a href="careers.html">Careers</a>
+            <a href="courses.html">courses</a>
+            <a href="projects.html">Projects</a>
+        </div>
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p>Email: info@hotbeansweb.com</p>
+            <p>Phone: 01234 567 890</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Hot Beans Web. All rights reserved.</p>
+    </div>
+</footer>
+
+    <div class="signup-container" id="signupForm">
+        <h2>Create Account</h2>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <button style="width: 100%; padding: 12px; background: #d1a3a3; border: none; font-weight: bold; border-radius: 8px; cursor: pointer;">Submit</button>
+        <button class="close-btn" onclick="closeForm()" style="width: 100%; margin-top: 10px; background: transparent; border: none; color: #777; cursor: pointer;">Close</button>
+    </div>
+
+    <script>
+    function openForm() {
+        document.getElementById("signupForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("signupForm").style.display = "none";
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+
+.header {
+    flex-direction: column;
+    background-color: rgb(121, 94, 94);
+}
+.header div {
+    display: flex;
+}
+
+.title {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #bc8f8f;
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+}
+.title img {
+    height: 120px;
+    width:  120px;
+}
+.title div {
+    padding: 10px;
+}
+
+.navigation {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.navigation a {
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+}
+.navigation a:hover {
+    background-color: rgb(190, 154, 170);
+}
+
+.sub_heading {
+    font-size: 50px;
+    margin: 50px; 
+    margin-top: 0px;
+    
+}
+
+.space {
+    text-align: center;
+    font-size: 25px;
+}
+
+.introduction {
+    font-size: 30px; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    margin: 10px;
+ text-align: center;
+}
+
+.heading4 {
+font-size: 80px; 
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+margin: 20px;
+text-align: center;
+}
+
+  .body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: #f4f4f4;
+    }
+
+    .content {
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .bottom-button {
+        text-align: center;
+        padding: 20px;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background: #667eea;
+        color: white;
+    }
+
+    button:hover {
+        background: #5a67d8;
+    }
+
+      .signup-container {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        width: 350px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .signup-container input {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .close-btn {
+        background: red;
+        margin-top: 10px;
+    }
+
+    body{
+    font-family: Arial;
+    background:#1e1e1e;
+    color:white;
+    text-align:center;
+}
+
+.container{
+    margin:20px;
+}
+
+button{
+    background:#007acc;
+    color:white;
+    border:none;
+    padding:15px;
+    margin:10px;
+    cursor:pointer;
+    border-radius:6px;
+}
+
+button:hover{
+    background:#005f9e;
+}
+
+#info{
+    margin-top:30px;
+    padding:20px;
+}
+
+.career-img{
+width:220px;
+display:block;
+margin-bottom:10px;
+border-radius:8px;
+height: 400px;
+width: 400px;
+}

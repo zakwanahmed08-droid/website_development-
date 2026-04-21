@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div class="header">
+        <div class="title"> 
+            <img src="favicon.ico" alt="Icon">
+            <div href="about_me.html">Hot beans web</div>
+        </div>
+        <div class="navigation"> 
+            <a href="index.html">Home</a>
+            <a href="about_us.html">About us</a>
+            <a href="careers.html">Careers</a>
+            <a href="courses.html">courses</a>
+            <a href="projects.html">Projects</a>
+            <a href="sign_up.html">Sign Up</a>
+        </div>
+    </div>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Ongoing Projects | Hot Beans Web</title>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #121212;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .projects {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .projects h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .project-slogan {
+            font-style: italic;
+            color: #d1a3a3;
+            margin-bottom: 50px;
+            display: block;
+        }
+
+     
+        .impact-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            background: rgba(209, 163, 163, 0.05);
+            padding: 20px 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(209, 163, 163, 0.1);
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 28px;
+            font-weight: bold;
+            color: #d1a3a3;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888;
+        }
+
+        .project-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: #1e1e1e;
+            width: 340px;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(209, 163, 163, 0.1);
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: #d1a3a3;
+        }
+
+        .project-card h3 {
+            color: #d1a3a3;
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .tech-stack {
+            font-size: 11px;
+            color: #777;
+            margin-bottom: 15px;
+            font-family: monospace;
+        }
+
+        .sustainability-score {
+            font-size: 12px;
+            color: #2ecc71;
+            background: rgba(46, 204, 113, 0.1);
+            padding: 4px 8px;
+            border-radius: 4px;
+            float: right;
+        }
+
+        .project-card p {
+            color: #b0b0b0;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .progress-wrapper {
+            margin-top: 25px;
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .progress-bar {
+            background: #333;
+            height: 8px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #b08d8d, #d1a3a3);
+            border-radius: 5px;
+        }
+
+        .status-pill {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            background: rgba(46, 204, 113, 0.1);
+            color: #2ecc71;
+            margin-bottom: 10px;
+        }
+
+    
+        .lead-dev-section {
+            background: #1a1a1a;
+            padding: 80px 20px;
+            margin-top: 60px;
+        }
+
+        .dev-profile {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            text-align: left;
+            flex-wrap: wrap;
+        }
+
+        .dev-photo {
+            width: 200px;
+            height: 200px;
+            background: #333;
+            border-radius: 50%;
+            border: 4px solid #d1a3a3;
+            object-fit: cover;
+        }
+
+        .dev-info h2 {
+            color: #d1a3a3;
+            margin-bottom: 10px;
+        }
+
+        .dev-quote {
+            font-style: italic;
+            color: #888;
+            border-left: 3px solid #d1a3a3;
+            padding-left: 15px;
+            margin: 20px 0;
+        }
+
+        
+        .interested-section {
+            background-color: #121212;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .interested-section h2 { font-size: 36px; margin-bottom: 10px; }
+
+        .create-btn {
+            background-color: #b08d8d;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .create-btn:hover { background-color: #d1a3a3; }
+
+        footer {
+            background-color: #0a0a0a;
+            color: white;
+            padding: 60px 20px 20px;
+            border-top: 1px solid #222;
+        }
+
+        .footer-columns {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-col h3 { color: #d1a3a3; margin-bottom: 20px; }
+        .footer-col p, .footer-col a { color: #ffffff; font-size: 14px; text-decoration: none; line-height: 2; display: block; }
+        .footer-bottom { text-align: center; border-top: 1px solid #222; padding-top: 20px; font-size: 12px; color: #666; }
+    </style>
+</head>
+
+<body>
+
+<section class="projects">
+    <h1>Ongoing Projects</h1>
+    <span class="project-slogan">"Fresh Code, Sustainable Future."</span>
+
+    <div class="impact-stats">
+        <div class="stat-item">
+            <span class="stat-number">12.4kg</span>
+            <span class="stat-label">CO2 Saved/Month</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">Code Efficiency</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Active Green Apps</span>
+        </div>
+    </div>
+
+    <div class="project-container">
+        <div class="project-card">
+            <span class="sustainability-score">Eco-Rating: A+</span>
+            <span class="status-pill">Active</span>
+            <div class="tech-stack">PYTHON // NEXT.JS // GREEN-API</div>
+            <h3>AI Customer Chatbot</h3>
+            <p>Our chatbot uses a lightweight LLM designed to run on low-wattage servers, reducing the energy cost of every customer interaction by 40% compared to standard bots.</p>
+            <div class="progress-wrapper">
+                <div class="progress-text"><span>Deployment</span><span>75%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 75%;"></div></div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <span class="sustainability-score">Eco-Rating: A</span>
+            <span class="status-pill" style="color:#f1c40f; background:rgba(241,196,15,0.1)">Testing</span>
+            <div class="tech-stack">REACT // TYPESCRIPT // STRIPE-V3</div>
+            <h3>E-commerce Platform</h3>
+            <p>A headless commerce solution that prioritizes "Digital Minimalism." By stripping unnecessary scripts, we've created a store that loads in under 1 second.</p>
+            <div class="progress-wrapper">
+                <div class="progress-text"><span>Beta Testing</span><span>90%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <span class="sustainability-score">Eco-Rating: B+</span>
+            <span class="status-pill" style="color:#3498db; background:rgba(52,152,219,0.1)">Planning</span>
+            <div class="tech-stack">FIGMA // TAILWIND // NODE.JS</div>
+            <h3>Healthcare Portal</h3>
+            <p>This project focuses on paperless integration, allowing patients to handle 100% of paperwork digitally, saving thousands of physical documents per year.</p>
+            <div class="progress-wrapper">
+                <div class="progress-text"><span>UI Design</span><span>40%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 40%;"></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="lead-dev-section">
+    <div class="dev-profile">
+        <div class="dev-info">
+            <h2>Meet our Lead Project Engineer</h2>
+            <h3>Jordan Avery</h3>
+            <p class="dev-quote">"At Hot Beans, we don't just build websites; we architect digital ecosystems that respect the planet. Every line of code is an opportunity to be more efficient.</p>
+            <p>Jordan oversees all ongoing projects, ensuring that our sustainability standards from server response times to asset compression are met with 100% precision. With over 10 years in green tech, Jordan leads our trainee developers in mastering sustainable practices.</p>
+        </div>
+    </div>
+</section>
+
+<section class="interested-section">
+    <h2>Ready to build the future?</h2>
+    <p>Click the button below to create an account and join our developer team.</p>
+    <button class="create-btn">Create account</button>
+</section>
+
+<footer>
+    <div class="footer-columns">
+        <div class="footer-col">
+            <h3>Hot Beans Web</h3>
+            <p>Building innovative websites while supporting the next generation of developers.</p>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <a href="sign_up.html">Sign Up</a>
+            <a href="index.html">Home</a>
+            <a href="about_us.html">About</a>
+            <a href="careers.html">Careers</a>
+            <a href="courses.html">courses</a>
+            <a href="projects.html">Projects</a>
+        </div>
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p>Email: info@hotbeansweb.com</p>
+            <p>Phone: 01234 567 890</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Hot Beans Web. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
